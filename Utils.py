@@ -17,7 +17,7 @@ class Cipher(object):
     def decrypt_character(char, key):
         return chr((ord(char) - key + 256) % 256)
 
-    def encrypt(self, message, key):
+    def encrypt(self, message):
         return ''.join([self.encode_character(char, self.key) for char in str(message)])
 
     @staticmethod
